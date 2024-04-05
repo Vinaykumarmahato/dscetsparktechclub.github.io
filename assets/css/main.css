@@ -97,7 +97,7 @@
 
 /* Styling for the image */
 .img-fluid {
-  max-width: 30%; /* Make the image responsive */
+  max-width: 100%; /* Make the image responsive */
   height: auto;
   border-radius: 10px; /* Add rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
