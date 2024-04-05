@@ -1,0 +1,105 @@
+/* Membership Section */
+.membership {
+    padding: 80px 0;
+  }
+  
+  .membership-text {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  .membership-subtitle {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  
+  .membership-benefits {
+    margin-top: 10px;
+  }
+  
+  .membership-benefits li {
+    margin-bottom: 10px;
+  }
+  
+  .membership-form {
+    margin-top: 30px;
+  }
+  
+  .membership-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .membership-form input,
+  .membership-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .membership-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .membership-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 991px) {
+    .membership-text,
+    .membership-subtitle,
+    .membership-form label,
+    .membership-form input,
+    .membership-form select,
+    .membership-form button {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .membership {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    
+    .membership-text,
+    .membership-subtitle {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .membership-text,
+    .membership-subtitle {
+      font-size: 14px;
+    }
+  }
+  /* Styles for the main content */
+
+ /* Styles for the container div */
+#Membership {
+  display: grid;
+  place-items: center; /* Center the content both horizontally and vertically */
+  height: 20px; /* Adjust height as needed */
+  margin-top: 20px;
+  font-weight: bold; /* Change font weight to bold */
+}
+
+/* Styles for the heading h2 */
+#Membership .membership-heading {
+  /* Add styles for the heading h2 */
+  font-weight: bold;
+}
+
+  
