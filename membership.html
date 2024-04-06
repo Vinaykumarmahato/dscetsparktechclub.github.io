@@ -221,7 +221,7 @@
     
       <!-- Main JS File -->
       <script src="assets/js/main.js"></script>
-      <script>
+      <!-- <script>
         document.addEventListener("DOMContentLoaded", function() {
             const submitButton = document.querySelector(".btn-submit");
     
@@ -254,7 +254,46 @@
                 window.location.href = mailtoLink;
             });
         });
+    </script> -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const submitButton = document.querySelector(".btn-submit");
+    
+            submitButton.addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent the form submission
+    
+                // Get the user's information
+                const name = document.getElementById("name").value;
+                const senderEmail = document.getElementById("email").value; // Get the sender's email
+                const year = document.getElementById("year").value;
+                const major = document.getElementById("major").value;
+    
+                // Create the email body with emojis and improved structure
+                const body = `
+                    📝 Membership Application Information 📝
+    
+                    ✨ Name: ${name}
+                    📧 Sender's Email: ${senderEmail}
+                    🎓 Year of Study: ${year}
+                    📚 Major: ${major}
+                `;
+    
+                // Set your email address
+                const yourEmail = "vinaytechnicaleh@gmail.com"; 
+    
+                // Construct the mailto link
+                const mailtoLink = `mailto:${yourEmail}?subject=Membership Application&body=${encodeURIComponent(body)}`;
+    
+                // Open the user's default email client with the mailto link
+                window.location.href = mailtoLink;
+    
+                // Display a thank you message
+                alert("Thanks for submitting the information! We will contact you soon.");
+            });
+        });
     </script>
+    
     
     
     
