@@ -27,6 +27,8 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="membership.css">
+  <link rel="stylesheet" href="project.css">
 
 </head>
 
@@ -339,6 +341,45 @@
 
 </section><!-- /Projects Section -->
 
+<!-- Project Submission Section -->
+<section id="project-submission" class="section project-submission">
+  <div class="container">
+      <div class="row gy-4">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <img src="assets/img/community2.png" class="img-fluid" alt="Project Submission">
+          </div>
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
+              <h2 class="section-title">Project Submission</h2>
+              <p class="project-submission-text">
+                  Do you have a project that you're working on and want to collaborate with others to enhance your skills? 
+                  Submit your project idea using the form below and let's work together to bring it to life!
+              </p>
+              <div class="project-submission-form">
+                  <h3 class="project-submission-subtitle">Project Submission Form</h3>
+                  <!-- Add your project submission form code here -->
+                  <form action="submit_project_form.php" method="post">
+                      <!-- Project submission form fields -->
+                      <label for="project-name">Project Name:</label>
+                      <input type="text" id="project-name" name="project-name" required>
+
+                      <label for="project-description">Project Description:</label>
+                      <textarea id="project-description" name="project-description" rows="4" required></textarea>
+
+                      <label for="github-repo">GitHub Repository:</label>
+                      <input type="url" id="github-repo" name="github-repo" placeholder="https://github.com/username/repository" required>
+
+                      <label for="contact-email">Contact Email:</label>
+                      <input type="email" id="contact-email" name="contact-email" required>
+
+                      <button type="submit" class="btn-submit">Submit Project</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</section><!-- /Project Submission Section -->
+
+
 
   </main>
 
@@ -427,6 +468,45 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const submitButton = document.querySelector(".btn-submit");
+
+        submitButton.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent the form submission
+
+            // Get the project submission information
+            const projectName = document.getElementById("project-name").value;
+            const projectDescription = document.getElementById("project-description").value;
+            const githubRepo = document.getElementById("github-repo").value;
+            const contactEmail = document.getElementById("contact-email").value;
+
+            // Create the email body with emojis and improved structure
+            const body = `
+                🚀 Project Submission Information 🚀
+
+                🏷 Project Name: ${projectName}
+                📝 Project Description: ${projectDescription}
+                🌐 GitHub Repository: ${githubRepo}
+                📧 Contact Email: ${contactEmail}
+            `;
+
+            // Set your email address
+            const yourEmail = "vinaytechnicaleh@gmail.com"; 
+
+            // Construct the mailto link
+            const mailtoLink = `mailto:${yourEmail}?subject=Project Submission&body=${encodeURIComponent(body)}`;
+
+            // Open the user's default email client with the mailto link
+            window.location.href = mailtoLink;
+
+            // Display a thank you message
+            alert("Thanks for submitting your project! We will review it shortly.");
+        });
+    });
+</script>
+
 
 </body>
 
