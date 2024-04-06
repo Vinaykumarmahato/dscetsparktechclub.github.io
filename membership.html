@@ -230,7 +230,7 @@
     
                 // Get the user's information
                 const name = document.getElementById("name").value;
-                const email = "vinaytechnicaleh@gmail.com"; // Set the email address
+                const senderEmail = document.getElementById("email").value; // Get the sender's email
                 const year = document.getElementById("year").value;
                 const major = document.getElementById("major").value;
     
@@ -239,13 +239,16 @@
                     📝 Membership Application Information 📝
     
                     ✨ Name: ${name}
-                    📧 Email: ${email}
+                    📧 Sender's Email: ${senderEmail}
                     🎓 Year of Study: ${year}
                     📚 Major: ${major}
                 `;
     
+                // Set your email address
+                const yourEmail = "vinaytechnicaleh@gmail.com"; 
+    
                 // Construct the mailto link
-                const mailtoLink = `mailto:${email}?subject=Membership Application&body=${encodeURIComponent(body)}`;
+                const mailtoLink = `mailto:${yourEmail}?subject=Membership Application&body=${encodeURIComponent(body)}`;
     
                 // Open the user's default email client with the mailto link
                 window.location.href = mailtoLink;
