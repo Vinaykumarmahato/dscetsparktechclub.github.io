@@ -221,6 +221,39 @@
     
       <!-- Main JS File -->
       <script src="assets/js/main.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const submitButton = document.querySelector(".btn-submit");
+    
+            submitButton.addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent the form submission
+    
+                // Get the user's information
+                const name = document.getElementById("name").value;
+                const email = "vinaytechnicaleh@gmail.com"; // Set the email address
+                const year = document.getElementById("year").value;
+                const major = document.getElementById("major").value;
+    
+                // Create the email body
+                const body = `
+                    Membership Application Information:
+    
+                    Name: ${name}
+                    Email: ${email}
+                    Year of Study: ${year}
+                    Major: ${major}
+                `;
+    
+                // Construct the mailto link
+                const mailtoLink = `mailto:${email}?subject=Membership Application&body=${encodeURIComponent(body)}`;
+    
+                // Open the user's default email client with the mailto link
+                window.location.href = mailtoLink;
+            });
+        });
+    </script>
+    
+    
     
     </body>
     
