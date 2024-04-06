@@ -96,10 +96,10 @@
 .btn {
     display: inline-block;
     background-color: #007bff;
-    color: #fff;
+    color: #ffffff;
     font-size: 18px;
     font-weight: 600;
-    padding: 15px 30px;
+    padding: 8px 15px;
     border-radius: 5px;
     text-transform: uppercase;
     transition: all 0.3s ease;
