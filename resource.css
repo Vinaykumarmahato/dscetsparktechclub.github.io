@@ -1,0 +1,149 @@
+/* Main */
+.main {
+    /* padding-top: 80px; */
+    /* padding-bottom: 80px; */
+}
+
+/* Resources Section */
+.resources-section {
+    padding: 50px 0;
+}
+
+.resources-section .section-heading {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.resources-section .section-heading h2 {
+    font-size: 36px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.resources-section .section-heading p {
+    font-size: 18px;
+    color: #666;
+}
+
+.resources-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.resources-section .col-lg-4 {
+    padding: 0 15px;
+}
+
+.resources-section .resource-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resources-section .resource-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.resources-section .resource-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.resources-section .resource-item-content {
+    padding: 30px;
+}
+
+.resources-section .resource-item h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.resources-section .resource-item p {
+    font-size: 16px;
+    color: #a5a2a2;
+    margin-bottom: 10px;
+    /* font-weight: 600; */
+}
+.resources-section .resource-item button {
+    background-color: #2c4bfc;
+    color: #ffffff;
+    border: none;
+    padding: 4px 7px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+}
+
+
+.resources-section .resource-item h3 {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+
+.resources-section .resource-item button:hover {
+    background-color: #21ee1a;
+}
+
+.resources-section .resource-item button a {
+    color: #fff; /* Text color for "View Now" */
+    text-decoration: none; /* Remove underline */
+}
+
+
+.youtuber-name-in-style {
+    font-weight: bold;
+    color: #4a90e2; /* You can adjust the color as per your preference */
+}
+
+.resource-item button {
+    background-color: #032405;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.resource-item button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Responsive Styling */
+@media (max-width: 1200px) {
+    .resources-section .col-lg-4 {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+}
+
+@media (max-width: 992px) {
+    .resources-section .col-lg-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .resources-section .col-lg-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+}
